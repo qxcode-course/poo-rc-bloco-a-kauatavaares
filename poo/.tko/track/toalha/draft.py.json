@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-17_14-09-52",
+            "content": "@@ -1,201 +1,18 @@\n-class Towel: %0A    def __init__(self, color: str, size: str):%0A        self.color: str = color%0A        self.size: str = size%0A        self.wetness: int = 0%0A%0Atowel = Towel(%22blue%22, %22P%22)%0Aprint(towel.color)%0A%0A\n+print(%22ola mundo%22)\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-17_14-41-02",
+            "content": "@@ -151,67 +151,9 @@\n  0%0A%0A\n-print(%22Qual a cor da sua toalha?%22)%0Acolor = input()%0Atowel: T\n+t\n owel\n@@ -161,21 +161,22 @@\n = Towel(\n-color\n+%22blue%22\n , %22P%22)%0Ap\n@@ -184,24 +184,8 @@\n int(\n-f%22Sua toalha %C3%A9 %7B\n towe\n@@ -195,9 +195,7 @@\n olor\n-%7D%22\n )%0A%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-09-17_14-44-49",
+            "content": "class Towel: \n    def __init__(self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\nprint(\"Qual a cor da sua toalha?\")\ncolor = input()\ntowel: Towel = Towel(color, \"P\")\nprint(f\"Sua toalha \u00e9 {towel.color}\")\n\n",
+            "lines": "11"
+        }
+    ]
+}
