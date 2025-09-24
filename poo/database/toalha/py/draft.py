@@ -35,8 +35,10 @@ def main():
     towel: Towel = Towel("", "")
     while True:
 
-        line: str = input()
-        args: list[str] = line.splip(" ")
+        line = input()
+        print(f"${line}")
+        sp = line.split(" ")
+        args = sp[0]
 
         if args[0] == "end":
             break
@@ -47,7 +49,7 @@ def main():
         elif args[0] == "dry":
             amount: int = int(args[1])
             towel.dry(amount)
-        elif args[0] == "show"
+        elif args[0] == "show":
             print(towel)
         else:
             print("fail: comando não encontrado")
