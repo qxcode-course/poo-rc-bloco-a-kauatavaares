@@ -12,8 +12,63 @@
         },
         {
             "label": "2025-09-17_14-44-49",
-            "content": "class Towel: \n    def __init__(self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\nprint(\"Qual a cor da sua toalha?\")\ncolor = input()\ntowel: Towel = Towel(color, \"P\")\nprint(f\"Sua toalha \u00e9 {towel.color}\")\n\n",
+            "content": "@@ -150,90 +150,8 @@\n = 0%0A\n-    def __str__(self):%0A        return f%22%7Bself.color%7D:%7Bself.size%7D:%7Bself.wetness%7D%22%0A%0A\n %0Apri\n@@ -182,20 +182,8 @@\n alha\n- e o tamanho\n ?%22)%0A\n@@ -202,23 +202,8 @@\n t()%0A\n-size = input()%0A\n towe\n@@ -269,22 +269,8 @@\n lor%7D\n- e %7Btowel.size%7D\n %22)%0A\n+%0A\n",
             "lines": "11"
+        },
+        {
+            "label": "2025-09-19_20-25-04",
+            "content": "@@ -392,11 +392,8 @@\n size%7D%22)%0A\n-%0A%0A%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-19_20-29-54",
+            "content": "@@ -392,8 +392,11 @@\n size%7D%22)%0A\n+%0A%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-09-19_20-33-05",
+            "content": "@@ -5,16 +5,17 @@\n s Towel:\n+ \n %0A    def\n@@ -146,25 +146,24 @@\n int = 0%0A\n-%0A\n     def \n maxWeten\n@@ -158,635 +158,229 @@\n def \n-maxWeteness(self) -%3E int:%0A        if self.size == %22P%22:%0A            return 10%0A        if self.size == %22M%22:%0A            return 20%0A        if self.size == %22G%22:%0A            return 30%0A        return 0%0A%0A    def dry(self, amount: int) -%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E self.maxWeteness():%0A            \n+__str__(self):%0A        return f%22%7Bself.color%7D:%7Bself.size%7D:%7Bself.wetness%7D%22%0A%0A%0A\n print(%22\n-toalha encharcada%22)%0A            self.wetness = self.maxWeteness()%0A%0A    def wring(self) -%3E None:%0A        self.wetness = 0%0A%0A    def isDry(self) -%3E bool:%0A        return self.wetness == 0%0A%0A    def show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bs\n+Qual a cor da sua toalha e o tamanho?%22)%0Acolor = input()%0Asize = input()%0Atowel: Towel = Towel(color, %22P%22)%0Aprint(f%22Sua toalha %C3%A9 %7Btow\n el\n-f\n .color%7D \n %7Bsel\n@@ -379,31 +379,21 @@\n or%7D \n-%7Bs\n+e %7Btow\n el\n-f\n .size%7D\n- %7Bself.wetness%7D%22\n+%22)%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-23_10-08-45",
+            "content": "@@ -721,17 +721,16 @@\n (self)%0A%0A\n-%0A\n     def \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-09-23_10-15-30",
+            "content": "@@ -447,17 +447,16 @@\n etness %3E\n-=\n  self.ma\n@@ -484,77 +484,79 @@\n     \n-self.wetness = self.maxWeteness()%0A            print(%22toalha ensopada%22\n+print(%22toalha encharcada%22)%0A            self.wetness = self.maxWeteness(\n )%0A%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-23_10-37-13",
+            "content": "@@ -1,8 +1,28 @@\n+@@ -1,821 +1,42 @@%0A-\n class To\n@@ -25,17 +25,19 @@\n s Towel:\n-%0A\n+%250A\n     def \n@@ -74,17 +74,19 @@\n e: str):\n-%0A\n+%250A\n         \n@@ -108,17 +108,19 @@\n  = color\n-%0A\n+%250A\n         \n@@ -140,17 +140,19 @@\n r = size\n-%0A\n+%250A\n         \n@@ -168,26 +168,30 @@\n ess: int = 0\n-%0A%0A\n+%250A%250A\n     def maxW\n@@ -209,15 +209,19 @@\n f) -\n-%3E\n+%253E\n  int:\n-%0A\n+%250A\n     \n@@ -244,13 +244,19 @@\n  == \n-%22P%22:%0A\n+%2522P%2522:%250A\n     \n@@ -272,17 +272,19 @@\n eturn 10\n-%0A\n+%250A\n         \n@@ -303,13 +303,19 @@\n  == \n-%22M%22:%0A\n+%2522M%2522:%250A\n     \n@@ -331,17 +331,19 @@\n eturn 20\n-%0A\n+%250A\n         \n@@ -362,13 +362,19 @@\n  == \n-%22G%22:%0A\n+%2522G%2522:%250A\n     \n@@ -390,17 +390,19 @@\n eturn 30\n-%0A\n+%250A\n         \n@@ -409,18 +409,22 @@\n return 0\n-%0A%0A\n+%250A%250A\n     def \n@@ -447,24 +447,28 @@\n : int) -\n-%3E\n+%253E\n  None:\n-%0A\n+%250A\n         \n@@ -489,17 +489,19 @@\n = amount\n-%0A\n+%250A\n         \n@@ -516,17 +516,19 @@\n wetness \n-%3E\n+%253E\n = self.m\n@@ -540,17 +540,19 @@\n eness():\n-%0A\n+%250A\n         \n@@ -588,17 +588,19 @@\n teness()\n-%0A\n+%250A\n         \n@@ -609,17 +609,19 @@\n   print(\n-%22\n+%2522\n toalha e\n@@ -631,12 +631,18 @@\n pada\n-%22)%0A%0A\n+%2522)%250A%250A\n     \n@@ -654,32 +654,36 @@\n ring(self) -\n-%3E\n+%253E\n  None:\n-%0A\n+%250A\n         self\n@@ -694,18 +694,22 @@\n ness = 0\n-%0A%0A\n+%250A%250A\n     def \n@@ -725,16 +725,20 @@\n f) -\n-%3E\n+%253E\n  bool:\n-%0A\n+%250A\n     \n@@ -765,18 +765,22 @@\n ess == 0\n-%0A%0A\n+%250A%250A\n     def \n@@ -795,16 +795,20 @@\n f) -\n-%3E\n+%253E\n  None:\n-%0A\n+%250A\n     \n@@ -826,11 +826,17 @@\n elf)\n-%0A%0A%0A\n+%250A%250A%250A\n     \n@@ -858,15 +858,19 @@\n f) -\n-%3E\n+%253E\n  str:\n-%0A\n+%250A\n     \n@@ -885,10 +885,14 @@\n rn f\n-%22%7B\n+%2522%257B\n self\n@@ -897,19 +897,23 @@\n lf.color\n-%7D %7B\n+%257D %257B\n self.siz\n@@ -917,11 +917,15 @@\n size\n-%7D %7B\n+%257D %257B\n self\n@@ -936,38 +936,160 @@\n ness\n-%7D%22%0A%0A    def main():%0A        towel:\n+%257D%2522%250A%250A%0A+@@ -812,36 +812,4 @@%250A ss%25257D%252522%250A-%25250A%25250A%0A     %0A@@ -46,17 +46,19 @@%0A  main():%0A-%250A%0A+%25250A%0A         %0A@@ -63,8 +63,9 @@%0A   towel:%0A+%250A%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-23_10-53-39",
+            "content": "@@ -809,8 +809,39 @@\n tness%7D%22%0A\n+%0A    def main():%0A        towel:\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-09-23_15-44-30",
+            "content": "@@ -1,815 +1,35 @@\n-class Towel:%0A    def __init__(self, color: str, size: str):%0A        self.color: str = color%0A        self.size: str = size%0A        self.wetness: int = 0%0A%0A    def maxWeteness(self) -%3E int:%0A        if self.size == %22P%22:%0A            return 10%0A        if self.size == %22M%22:%0A            return 20%0A        if self.size == %22G%22:%0A            return 30%0A        return 0%0A%0A    def dry(self, amount: int) -%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E= self.maxWeteness():%0A            self.wetness = self.maxWeteness()%0A            print(%22toalha ensopada%22)%0A%0A    def wring(self) -%3E None:%0A        self.wetness = 0%0A%0A    def isDry(self) -%3E bool:%0A        return self.wetness == 0%0A%0A    def show(self) -%3E None:%0A        print(self)%0A%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.color%7D %7Bself.size%7D %7Bself.wetness%7D%22\n+@@ -813,5 +813,4 @@%0A s%257D%2522%250A%0A-q%0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-09-23_15-46-01",
+            "content": "@@ -720,16 +720,17 @@\n (self)%0A%0A\n+%0A\n     def \n@@ -808,9 +808,8 @@\n etness%7D%22\n-%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-23_15-46-58",
+            "content": "@@ -807,8 +807,9 @@\n etness%7D%22\n+%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-09-23_16-00-40",
+            "content": "class Towel:\n    def __init__(self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\n    def maxWeteness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness >= self.maxWeteness():\n            self.wetness = self.maxWeteness()\n            print(\"toalha ensopada\")\n\n    def wring(self) -> None:\n        self.wetness = 0\n\n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n    def show(self) -> None:\n        print(self)\n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"",
+            "lines": "32"
         }
     ]
 }
