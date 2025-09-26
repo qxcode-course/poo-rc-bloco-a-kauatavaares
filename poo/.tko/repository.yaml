@@ -10,7 +10,8 @@ expanded:
 - bloco_b-primeiras-classes
 - bloco_b-modificadores-de-acesso
 - bloco_b-agregação-simples
-tasks: {}
+tasks:
+  enxugar: '{rate:100}'
 flags:
   quests: 0
   tracks: 0

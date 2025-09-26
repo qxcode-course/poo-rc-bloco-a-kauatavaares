@@ -1,48 +1,41 @@
 class Towel:
-    def __init__(self, color: str, size: str):
-        self.color: str = color
+    def __init__(self, color: str, size: str):  # construtor
+        self.color: str = color  # atributos
         self.size: str = size
         self.wetness: int = 0
 
-    def maxWeteness(self) -> int:
-        if self.size == "P":
+    def dry(self, amount: int) -> None:
+        self.wetness += amount
+        if self.wetness >= self.isMaxWetness():
+            self.wetness = self.isMaxWetness()
+            print("toalha saturada, ensopada, pingando")
+
+    def wringOut(self):
+        self.wetness = 0
+
+    def isMaxWetness(self) -> int:
+        if self.size == "P":  # early return
             return 10
         if self.size == "M":
             return 20
         if self.size == "G":
             return 30
-        return 0
+        return 0  # default return
 
-    def dry(self, amount: int) -> None:
-        self.wetness += amount
-        if self.wetness >= self.maxWeteness():
-            self.wetness = self.maxWeteness()
-            print("toalha ensopada")
+    def __str__(self) -> str:  # toString
+        return f"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}"
 
-    def wring(self) -> None:
-        self.wetness = 0
-
-    def isDry(self) -> bool:
-        return self.wetness == 0
-
-    def show(self) -> None:
-        print(self)
-
-    def __str__(self) -> str:
-        return f"{self.color} {self.size} {self.wetness}"
 
 def main():
-    towel: Towel = Towel("", "")
-    while True:
+    towel: Towel = Towel("", "")  # 2: criar um obj com qq valor inicial
+    while True:  # 3: loop infinito
 
-        line = input()
-        print(f"${line}")
-        sp = line.split(" ")
-        args = sp[0]
+        line: str = input()  # 4: perguntar ao usuario
+        args: list[str] = line.split(" ")  # 5: separar argumentos
 
         if args[0] == "end":
             break
-        elif args[0] == "new":
+        elif args[0] == "new":  # color size
             color: str = args[1]
             size: str = args[2]
             towel = Towel(color, size)
@@ -51,7 +44,8 @@ def main():
             towel.dry(amount)
         elif args[0] == "show":
             print(towel)
-        else:
+        else:  # 7: erro
             print("fail: comando não encontrado")
 
-main()
+
+main()  # passo 1
