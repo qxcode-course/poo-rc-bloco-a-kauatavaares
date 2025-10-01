@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-01_18-31-20",
+            "content": "from typing import Any\n\n\nclass Calculaltor:\n    def __init__(self, batteryMax: int):\n        self.display = 0.0\n        self.batteryMax = batteryMax\n        self.battery = 0\n\n    def __str__(self):\n        return f\"display = {self.display: .2f}, battery = {self.battery}\"\n\n    def charge(self, increment: int):\n        self.battery += increment\n        if self.battery > self.batteryMax:\n            self.battery = self.batteryMax\n\n    def useBattery(self):\n        if self.battery > 0:\n            self.battery -= 1\n            return True\n        else:\n            print(\"fail: bateria insuficiente\")\n            return False\n\n    def sum(self, a, b):\n        if self.useBattery() == False:\n            return\n        self.display = a + b\n\n    def division(self, a, b):\n        if self.useBattery() == False:\n            return\n        if b == 0:\n            print(\"fail: divisao por zero\")\n            return\n        self.display = a / b\n\ndef main():\n\n\n\n\n\nmain()\n",
+            "lines": "45"
+        }
+    ]
+}
