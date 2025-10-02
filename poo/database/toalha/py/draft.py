@@ -25,7 +25,6 @@ class Towel:
     def __str__(self) -> str:  # toString
         return f"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}"
 
-
 def main():
     towel: Towel = Towel("", "")  # 2: criar um obj com qq valor inicial
     while True:  # 3: loop infinito
