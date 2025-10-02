@@ -28,7 +28,6 @@ class Towel:
     def __str__(self) -> str:
         return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
 
-
 def main():
     towel: Towel = Towel("", "")
     while True:

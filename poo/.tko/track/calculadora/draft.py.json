@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2025-10-01_18-31-20",
-            "content": "from typing import Any\n\n\nclass Calculaltor:\n    def __init__(self, batteryMax: int):\n        self.display = 0.0\n        self.batteryMax = batteryMax\n        self.battery = 0\n\n    def __str__(self):\n        return f\"display = {self.display: .2f}, battery = {self.battery}\"\n\n    def charge(self, increment: int):\n        self.battery += increment\n        if self.battery > self.batteryMax:\n            self.battery = self.batteryMax\n\n    def useBattery(self):\n        if self.battery > 0:\n            self.battery -= 1\n            return True\n        else:\n            print(\"fail: bateria insuficiente\")\n            return False\n\n    def sum(self, a, b):\n        if self.useBattery() == False:\n            return\n        self.display = a + b\n\n    def division(self, a, b):\n        if self.useBattery() == False:\n            return\n        if b == 0:\n            print(\"fail: divisao por zero\")\n            return\n        self.display = a / b\n\ndef main():\n\n\n\n\n\nmain()\n",
+            "content": "@@ -645,24 +645,11 @@\n f, a\n-:float, b: float\n+, b\n ):%0A \n@@ -952,710 +952,10 @@\n ):%0A%0A\n-calculaltor = Calculaltor = None%0Awhile True:%0A%0A    line: str = input()%0A    print(%22$%22 + line)%0A    args: list%5Bstr%5D = line.split(%22 %22)%0A%0A    if args%5B0%5D == %22end%22:%0A        break%0A    elif args%5B0%5D == %22init%22:%0A        batteryMax: int = int(args%5B1%5D)%0A        calculaltor = Calculaltor(batteryMax)%0A    elif args%5B0%5D == %22show%22:%0A        print(calculaltor)%0A    elif args%5B0%5D == %22charge%22:%0A        increment: int = int(args%5B1%5D)%0A        calculaltor.charge(increment)%0A    elif args%5B0%5D == %22sum%22:%0A        a: float = float(args%5B1%5D)%0A        b: float = float(args%5B2%5D)%0A        calculaltor.sum(a,b)%0A    elif args%5B0%5D == %22division%22:%0A        a: float = float(args%5B1%5D)%0A        b: float = float(args%5B2%5D)%0A        calculaltor.division(a, b)\n+%0A%0A\n %0A%0Ama\n",
             "lines": "45"
+        },
+        {
+            "label": "2025-10-02_14-36-17",
+            "content": "@@ -961,21 +961,31 @@\n ain():%0A%0A\n-    c\n+calculaltor = C\n alculalt\n@@ -994,20 +994,16 @@\n  = None%0A\n-    \n while Tr\n@@ -1007,20 +1007,16 @@\n  True:%0A%0A\n-    \n     line\n@@ -1035,60 +1035,8 @@\n t()%0A\n-        if line == %22%22:%0A                continue%0A    \n     \n@@ -1053,20 +1053,16 @@\n + line)%0A\n-    \n     args\n@@ -1092,20 +1092,16 @@\n t(%22 %22)%0A%0A\n-    \n     if a\n@@ -1129,22 +1129,14 @@\n     \n-  \n-  \n break%0A\n-    \n     \n@@ -1167,20 +1167,16 @@\n         \n-   \n- \n batteryM\n@@ -1190,36 +1190,32 @@\n  = int(args%5B1%5D)%0A\n-    \n         calculal\n@@ -1244,20 +1244,16 @@\n eryMax)%0A\n-    \n     elif\n@@ -1276,28 +1276,24 @@\n w%22:%0A        \n- \n-   \n print(calcul\n@@ -1299,20 +1299,16 @@\n laltor)%0A\n-    \n     elif\n@@ -1337,20 +1337,16 @@\n         \n-  \n-  \n incremen\n@@ -1367,36 +1367,32 @@\n rgs%5B1%5D)%0A        \n-   \n- \n calculaltor.char\n@@ -1405,20 +1405,16 @@\n rement)%0A\n-    \n     elif\n@@ -1432,36 +1432,32 @@\n  %22sum%22:%0A        \n-    \n a: float = float\n@@ -1466,36 +1466,32 @@\n rgs%5B1%5D)%0A        \n- \n-   \n b: float = float\n@@ -1500,36 +1500,32 @@\n rgs%5B2%5D)%0A        \n- \n-   \n calculaltor.sum(\n@@ -1529,20 +1529,16 @@\n um(a,b)%0A\n-    \n     elif\n@@ -1565,28 +1565,24 @@\n n%22:%0A        \n-   \n- \n a: float = f\n@@ -1591,28 +1591,24 @@\n at(args%5B1%5D)%0A\n-    \n         b: f\n@@ -1625,28 +1625,24 @@\n at(args%5B2%5D)%0A\n-    \n         calc\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-10-02_14-42-08",
+            "content": "@@ -232,16 +232,17 @@\n display:\n+ \n .2f%7D, ba\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-02_14-42-26",
+            "content": "@@ -247,16 +247,17 @@\n attery =\n+ \n %7Bself.ba\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-02_14-42-45",
+            "content": "@@ -247,17 +247,16 @@\n attery =\n- \n %7Bself.ba\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-02_14-43-00",
+            "content": "@@ -31,16 +31,17 @@\n  Calcula\n+l\n tor:%0A   \n@@ -967,24 +967,25 @@\n %0A    calcula\n+l\n tor = None%0A \n@@ -983,16 +983,16 @@\n  = None%0A\n-\n     whil\n@@ -1286,16 +1286,17 @@\n  calcula\n+l\n tor = Ca\n@@ -1300,16 +1300,17 @@\n  Calcula\n+l\n tor(batt\n@@ -1374,16 +1374,17 @@\n (calcula\n+l\n tor)%0A   \n@@ -1471,24 +1471,25 @@\n      calcula\n+l\n tor.charge(i\n@@ -1620,24 +1620,25 @@\n      calcula\n+l\n tor.sum(a,b)\n@@ -1666,16 +1666,21 @@\n  == %22div\n+ision\n %22:%0A     \n@@ -1742,32 +1742,32 @@\n  float(args%5B2%5D)%0A\n-\n             calc\n@@ -1769,16 +1769,17 @@\n  calcula\n+l\n tor.divi\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-02_14-49-03",
+            "content": "from typing import Any\n\n\nclass Calculator:\n    def __init__(self, batteryMax: int):\n        self.display = 0.0\n        self.batteryMax = batteryMax\n        self.battery = 0\n\n    def __str__(self):\n        return f\"display = {self.display:.2f}, battery = {self.battery}\"\n\n    def charge(self, increment: int):\n        self.battery += increment\n        if self.battery > self.batteryMax:\n            self.battery = self.batteryMax\n\n    def useBattery(self):\n        if self.battery > 0:\n            self.battery -= 1\n            return True\n        else:\n            print(\"fail: bateria insuficiente\")\n            return False\n\n    def sum(self, a:float, b: float):\n        if self.useBattery() == False:\n            return\n        self.display = a + b\n\n    def division(self, a, b):\n        if self.useBattery() == False:\n            return\n        if b == 0:\n            print(\"fail: divisao por zero\")\n            return\n        self.display = a / b\n\ndef main():\n\n    calculator = None\n    while True:\n\n        line: str = input()\n        if line == \"\":\n                continue\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            batteryMax: int = int(args[1])\n            calculator = Calculator(batteryMax)\n        elif args[0] == \"show\":\n            print(calculator)\n        elif args[0] == \"charge\":\n            increment: int = int(args[1])\n            calculator.charge(increment)\n        elif args[0] == \"sum\":\n            a: float = float(args[1])\n            b: float = float(args[2])\n            calculator.sum(a,b)\n        elif args[0] == \"div\":\n            a: float = float(args[1])\n            b: float = float(args[2])\n            calculator.division(a, b)\n\nmain()\n",
+            "lines": "69"
         }
     ]
 }
