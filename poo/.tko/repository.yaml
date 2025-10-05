@@ -12,7 +12,7 @@ expanded:
 - bloco_b-primeiras-classes
 tasks:
   toalha: '{rate:100, alone:10}'
-  animal: '{rate:100, alone:9}'
+  animal: '{rate:100, alone:10}'
   carro: '{rate:100, alone:10}'
   calculadora: '{rate:100, alone:10}'
   enxugar: '{rate:100, alone:8}'
@@ -22,4 +22,4 @@ flags:
   tasks: 0
   graph: 0
   xray: 0
-index: carro
+index: calculadora

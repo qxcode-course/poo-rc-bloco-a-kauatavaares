@@ -1,0 +1,3 @@
+2025-10-05 18:50:41, SELF, v:1, k:animal, rate:100, alone:10
+2025-10-05 18:51:54, MOVE, v:1, k:calculadora, mode:PICK
+2025-10-05 18:51:58, EXEC, v:1, k:calculadora, mode:FULL, rate:100, size:67
